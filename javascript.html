@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+    <meta charset="utf-8" />
+    <style>
+        .classe1 {
+            background-color: orangered;
+
+        }
+
+        .classe2 {
+            color: white;
+            text-align: center
+        }
+    </style>
+
+
+</head>
+
+<body class="classe1">
+
+
+
+    <h2 class="classe2">SOMA</h2>
+
+    <div class="classe2">
+
+        <input type="number" id="valor1"> +
+        <input type="number" id="valor2"> =
+        <input type="number" id="valor3">
+        <button onclick="funcao1()">RESULTADO</button>
+    </div>
+
+    <h2 class="classe2">SUBTRAÇÃO</h2>
+
+    <div class="classe2">
+        <input type="number" id="valor4"> -
+        <input type="number" id="valor5"> =
+        <input type="number" id="valor6">
+        <button onclick="funcao2()">RESULTADO</button>
+
+
+    </div>
+
+    <h2 class="classe2">MULTIPLICAÇÃO</h2>
+
+    <div class="classe2">
+        <input type="number" id="valor7"> x
+        <input type="number" id="valor8"> =
+        <input type="number" id="valor9">
+        <button onclick="funcao3()">RESULTADO</button>
+
+
+    </div>
+
+    <h2 class="classe2">DIVISÃO</h2>
+
+    <div class="classe2">
+        <input type="number" id="valor10"> x
+        <input type="number" id="valor11"> =
+        <input type="number" id="valor12">
+        <button onclick="funcao4()">RESULTADO</button>
+
+
+    </div>
+
+    <h2 class="classe2">OPERAÇÕES</h2>
+
+    <div class="classe2">
+        <select id="resultado2">
+            <option value="soma">SOMA</option>
+            <option value="subtração">SUBTRAÇÃO</option>
+            <option value="multiplicação">MULTIPLICAÇÃO</option>
+            <option value="divisão">DIVISÃO</option>
+        </select>
+        <input type="number" id="bloco1">
+        <input type="number" id="bloco2">
+        <input type="number" id="bloco3">
+        <button onclick="funcao6()">RESULTADO</button>
+
+
+    </div>
+
+    <script>
+        function funcao1() {
+            var x = document.getElementById("valor1").value;
+            x = parseInt(x);
+            var y = document.getElementById("valor2").value;
+            y = parseInt(y);
+            document.getElementById("valor3").value = x + y;
+        }
+        function funcao2() {
+            var x = document.getElementById("valor4").value;
+            x = parseInt(x);
+            var y = document.getElementById("valor5").value;
+            y = parseInt(y);
+            document.getElementById("valor6").value = x - y;
+        }
+        function funcao3() {
+            var x = document.getElementById("valor7").value;
+            x = parseInt(x);
+            var y = document.getElementById("valor8").value;
+            y = parseInt(y);
+            document.getElementById("valor9").value = x * y;
+        }
+        function funcao4() {
+            var x = document.getElementById("valor10").value;
+            x = parseInt(x);
+            var y = document.getElementById("valor11").value;
+            y = parseInt(y);
+            document.getElementById("valor12").value = x / y;
+        }
+        function funcao5() {
+            var a = document.getElementById("bloco1").value;
+            a = parseInt(a);
+            var b = document.getElementById("bloco2").value;
+            b = parseInt(b);
+
+            var option = document.getElementById("resultado").value;
+
+            if (option == "soma") {
+                document.getElementById("bloco3").value = a + b;
+            }
+            else if (option == "subtração") {
+                document.getElementById("bloco3").value = a - b;
+
+            }
+            else if (option == "multiplicação") {
+                document.getElementById("bloco3").value = a * b;
+            }
+            else {
+                document.getElementById("bloco3").value = a / b;
+            }
+        }
+
+        function funcao6() {
+            var a = document.getElementById("bloco1").value;
+            a = parseInt(a);
+            var b = document.getElementById("bloco2").value;
+            b = parseInt(b);
+
+            var option = document.getElementById("resultado2").value;
+
+            switch (option) {
+                case "soma":
+                    document.getElementById("bloco3").value = a + b;
+                    break;
+
+
+                case "subtração": 
+                    document.getElementById("bloco3").value = a - b;
+                    break;
+
+
+
+
+                case "multiplicação":
+                    document.getElementById("bloco3").value = a * b;
+                    break;
+
+
+
+                case "divisão":
+                    document.getElementById("bloco3").value = a / b;
+            }
+        }
+
+
+
+    </script>
+
+
+</body>
+
+</html>
